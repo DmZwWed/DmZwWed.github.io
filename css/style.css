@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* min-screen-width = 200px, max-screen-width = 1280px */
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || VARIABLE */
+:root {
+  /* COLORS */
+  /* Sky Grey Background*/
+  --PRIMARY-BGCOLOR: rgba(166, 174, 186, 1);
+
+  /* Dark Blue Color */
+  --SECONDARY-COLOR: rgba(31, 43, 65, 1);
+
+  /* Orange Action Color */
+  --ACTION-COLOR: rgba(233, 187, 138, 1);
+
+  /* White Main Text */
+  --FONT-COLOR: whitesmoke;
+
+  /* Additional Colors */
+  --NAV-BGCOLOR: rgba(166, 172, 184, 0.7);
+  --FOOTER-FONT-COLOR: #000;
+
+  /* Link Colors */
+  --LINK-SHADOW: var(--FONT-COLOR);
+  --LINK-COLOR: var(--ACTION-COLOR);
+  --LINK-HOVER-BGCOLOR: var(--ACTION-COLOR);
+  --LINK-HOVER-COLOR: var(--SECONDARY-COLOR);
+
+  --LINK-NAV-COLOR: var(--SECONDARY-COLOR);
+  --LINK-NAV-TEXT-SHADOW: var(--FONT-COLOR);
+  --LINK-NAV-BGCOLOR: var(--ACTION-COLOR);
+  --LINK-NAV-BGCOLOR-LINK: var(--ACTION-COLOR);
+  --LINK-NAV-BGCOLOR-VISITED: var(--ACTION-COLOR);
+  --LINK-NAV-BGCOLOR-HOVER: var(--FONT-COLOR);
+  --LINK-NAV-BGCOLOR-ACTIVE: var(--FONT-COLOR);
+
+  /* FONTS */
+  --FF: Arial, Helvetica, sans-serif;
+  --HERO-FF: "Pacifico", cursive;
+  --FS: clamp(8px, 4vw, 26px);
+  --HERO-H1-FS: clamp(8px, 6vw, 52px);
+  --FOOTER-FS: clamp(6px, 4vw, 20px);
+  --FONT-BORDER: -1px 0 var(--SECONDARY-COLOR), 2px 0 var(--SECONDARY-COLOR),
+    0 -1px var(--SECONDARY-COLOR), 0 2px var(--SECONDARY-COLOR);
+
+  /* BORDERS */
+  --BORDERS: 1px solid var(--BORDER-COLOR);
+  --BORDER-RADIUS: 10vw;
+  --BORDER-TABLE: 1px solid;
+
+  /* STANDARD PADDING */
+  --PADDING-TB: 4vh;
+  --PADDING-SIDE: 2vw;
+
+  /* MARGIN */
+  --MARGIN-TB: 3vh;
+  --MARGIN-FOOTER-TB: 5vh;
+  --MARGIN-QUESTION-TB: calc(var(--MARGIN-TB) * 1.5);
+  --MARGIN-ANSWER-TB: calc(var(--MARGIN-TB) / 2);
+  --MARGIN-TABLE: var(--MARGIN-ANSWER-TB) auto var(--MARGIN-TB) auto;
+
+  /* Custom Variables */
+  --HEADER-NAV-LR-WIDTH: 35vw;
+  --MAX-WIDTH: 1280px;
+  --MAX-WIDTH-TABLE: 1000px;
+}
+
+/* || TABLE || */
+table {
+  margin: var(--MARGIN-TABLE);
+  max-width: var(--MAX-WIDTH-TABLE);
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: var(--BORDER-TABLE);
+}
+
+/* || HEADER || */
+.header {
+  position: sticky;
+  font-weight: bold;
+  top: 0;
+  z-index: 1;
+  height: 10vh;
+  width: 100%;
+  font-size: var(--FS);
+  background-color: var(--NAV-BGCOLOR);
+}
+
+.header__nav {
+  height: inherit;
+  background-color: var(--NAV-BGCOLOR);
+  font-size: var(--FS);
+}
+
+.header__nav_left {
+  float: left;
+  height: inherit;
+  width: var(--HEADER-NAV-LR-WIDTH);
+}
+
+a {
+  text-decoration: none;
+  text-shadow: none;
+  color: var(--LINK-COLOR);
+}
+
+a:hover {
+  color: var(--LINK-HOVER-COLOR);
+  background-color: var(--LINK-HOVER-BGCOLOR);
+}
+
+.header__nav_rsvp {
+  display: block;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  height: inherit;
+  padding: 3vh 0; /* center rsvp text */
+  width: var(--HEADER-NAV-LR-WIDTH);
+  color: var(--LINK-NAV-COLOR);
+  text-shadow: var(--LINK-NAV-TEXT-SHADOW);
+  background-color: var(--LINK-NAV-BGCOLOR);
+  border-radius: var(--BORDER-RADIUS) 0;
+}
+
+.header__nav_rsvp:link {
+  background-color: var(--LINK-NAV-BGCOLOR-LINK);
+}
+
+.header__nav_rsvp:visited {
+  background-color: var(--LINK-NAV-BGCOLOR-VISITED);
+}
+
+.header__nav_rsvp:hover {
+  background-color: var(--LINK-NAV-BGCOLOR-HOVER);
+}
+
+.header__nav_rsvp:active {
+  background-color: var(--LINK-NAV-BGCOLOR-ACTIVE);
+}
+
+.hero__container {
+  position: relative;
+}
+
+.hero__img {
+  display: block;
+  margin: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: var(--MAX-WIDTH);
+  border-radius: var(--BORDER-RADIUS);
+}
+
+.hero__h1 {
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-shadow: var(--FONT-BORDER);
+  font-size: var(--HERO-H1-FS);
+  font-family: var(--HERO-FF);
+  color: var(--FONT-COLOR);
+}
+
+/* || BODY || */
+body {
+  text-align: center;
+  background-color: var(--PRIMARY-BGCOLOR);
+}
+
+/* || MAIN || */
+.main {
+  font-family: var(--FF);
+  font-size: var(--FS);
+  text-shadow: var(--FONT-BORDER);
+  color: var(--FONT-COLOR);
+  margin: var(--MARGIN-TB) 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    margin-left: calc((100vw - var(--MAX-WIDTH)) / 2);
+    margin-right: calc((100vw - var(--MAX-WIDTH)) / 2);
+  }
+}
+
+.timeplace__article {
+  background-color: var(--SECONDARY-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.timeplace__datetime_container,
+.timeplace__address {
+  margin: var(--MARGIN-TB) 0;
+}
+
+.timeplace__datetime_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.faq__article {
+  background-color: var(--SECONDARY-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+  margin: var(--MARGIN-TB) 0;
+}
+
+.faq__question {
+  margin-top: var(--MARGIN-QUESTION-TB);
+}
+
+.faq__answer {
+  margin-top: var(--MARGIN-ANSWER-TB);
+}
+
+.faq_parking_method,
+.faq_parking_location {
+  list-style-position: inside;
+  text-align: left;
+}
+
+.faq_parking_method_li,
+.faq_parking_location_li {
+  margin: var(--MARGIN-ANSWER-TB) 0;
+}
+
+.accomodation__article {
+  background-color: var(--SECONDARY-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+  margin: var(--MARGIN-TB) 0;
+}
+
+/* || FOOTER || */
+.footer {
+  font-family: var(--FF);
+  font-size: var(--FOOTER-FS);
+  color: var(--FOOTER-FONT-COLOR);
+  margin: var(--MARGIN-FOOTER-TB) 0;
+}
