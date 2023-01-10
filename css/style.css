@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing Script&display=swap");
 /* min-screen-width = 200px, max-screen-width = 1280px */
 
 /* || RESET */
@@ -51,12 +51,12 @@ textarea {
 
   /* FONTS */
   --FF: Arial, Helvetica, sans-serif;
-  --HERO-FF: "Pacifico", cursive;
+  --HERO-FF: "Dancing Script", cursive;
   --FS: clamp(8px, 4vw, 26px);
   --HERO-H1-FS: clamp(8px, 6vw, 52px);
   --FOOTER-FS: clamp(6px, 4vw, 20px);
-  --FONT-BORDER: -1px 0 var(--SECONDARY-COLOR), 2px 0 var(--SECONDARY-COLOR),
-    0 -1px var(--SECONDARY-COLOR), 0 2px var(--SECONDARY-COLOR);
+  --FONT-BORDER: -1px 0 var(--SECONDARY-COLOR), 4px 0 var(--SECONDARY-COLOR),
+    0 -1px var(--SECONDARY-COLOR), 0 4px var(--SECONDARY-COLOR);
 
   /* BORDERS */
   --BORDERS: 1px solid var(--BORDER-COLOR);
