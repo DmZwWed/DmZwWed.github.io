@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects Daughter&display=swap");
 /* min-screen-width = 200px, max-screen-width = 1280px */
 
 /* || RESET */
@@ -12,7 +14,8 @@
 
 input,
 button,
-textarea {
+textarea,
+address {
   font: inherit;
 }
 
@@ -50,13 +53,16 @@ textarea {
   --LINK-NAV-BGCOLOR-ACTIVE: var(--FONT-COLOR);
 
   /* FONTS */
-  --FF: Arial, Helvetica, sans-serif;
+  --FF: "Courgette", cursive;
   --HERO-FF: "Dancing Script", cursive;
+  --FAQQ-FF: "Courgette", cursive;
+  --FAQA-FF: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   --FS: clamp(8px, 4vw, 26px);
-  --HERO-H1-FS: clamp(8px, 6vw, 52px);
-  --FOOTER-FS: clamp(6px, 4vw, 20px);
-  --FONT-BORDER: -1px 0 var(--SECONDARY-COLOR), 4px 0 var(--SECONDARY-COLOR),
-    0 -1px var(--SECONDARY-COLOR), 0 4px var(--SECONDARY-COLOR);
+  --HERO-H1-FS: clamp(16px, 6vw, 52px);
+  --MAIN-H2-FS: calc(var(--FS) * 1.5);
+  --MAIN-FAQQ-FS: calc(var(--FS) * 1.25);
+  --FONT-SHADOW-H1: -1px 3px 5px var(--SECONDARY-COLOR);
+  --FONT-SHADOW: -0.1px 0.1px 1px var(--ACTION-COLOR);
 
   /* BORDERS */
   --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -179,13 +185,17 @@ a:hover {
   top: 5%;
   left: 50%;
   transform: translate(-50%, 0%);
-  text-shadow: var(--FONT-BORDER);
+  text-shadow: var(--FONT-SHADOW-H1);
   font-size: var(--HERO-H1-FS);
   font-family: var(--HERO-FF);
   color: var(--FONT-COLOR);
 }
 
 /* || BODY || */
+h2 {
+  font-size: var(--MAIN-H2-FS);
+}
+
 body {
   text-align: center;
   background-color: var(--PRIMARY-BGCOLOR);
@@ -195,7 +205,7 @@ body {
 .main {
   font-family: var(--FF);
   font-size: var(--FS);
-  text-shadow: var(--FONT-BORDER);
+  text-shadow: var(--FONT-SHADOW);
   color: var(--FONT-COLOR);
   margin: var(--MARGIN-TB) 0;
 }
@@ -207,18 +217,18 @@ body {
   }
 }
 
-.timeplace__article {
+.timevenue__article {
   background-color: var(--SECONDARY-COLOR);
   border-radius: var(--BORDER-RADIUS);
   padding: var(--PADDING-TB) var(--PADDING-SIDE);
 }
 
-.timeplace__datetime_container,
-.timeplace__address {
+.timevenue__datetime_container,
+.timevenue__address {
   margin: var(--MARGIN-TB) 0;
 }
 
-.timeplace__datetime_container {
+.timevenue__datetime_container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -230,12 +240,25 @@ body {
   margin: var(--MARGIN-TB) 0;
 }
 
+input {
+  width: 100%;
+  margin: var(--MARGIN-ANSWER-TB) 0;
+}
+
 .faq__question {
-  margin-top: var(--MARGIN-QUESTION-TB);
+  margin: var(--MARGIN-QUESTION-TB) 0;
+  font-family: var(--FAQQ-FF);
+  font-weight: bold;
+  font-size: var(--MAIN-FAQQ-FS);
+  background-color: var(--ACTION-COLOR);
+  color: var(--SECONDARY-COLOR);
+  padding: var(--PADDING-TB);
+  border-radius: var(--BORDER-RADIUS) 0;
 }
 
 .faq__answer {
   margin-top: var(--MARGIN-ANSWER-TB);
+  font-family: var(--FAQA-FF);
 }
 
 .faq_parking_method,
@@ -259,7 +282,7 @@ body {
 /* || FOOTER || */
 .footer {
   font-family: var(--FF);
-  font-size: var(--FOOTER-FS);
+  font-size: var(--FS);
   color: var(--FOOTER-FONT-COLOR);
   margin: var(--MARGIN-FOOTER-TB) 0;
 }
