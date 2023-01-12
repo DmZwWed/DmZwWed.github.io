@@ -52,6 +52,7 @@
           title="DM & ZW ROM picture"
           width="1280"
           height="853"
+          loading="eager"
         />
         <!-- <figcaption class="offscreen">DM & ZW ROM picture</figcaption> -->
       </figure>
@@ -101,298 +102,258 @@
       <!-- FAQ ARTICLE START -->
       <article id="faq" class="faq__article">
         <h2 class="faq__h2">FAQs</h2>
-        <!-- <form class="faq__question" action="action">
-          <label for="searchbox">Search :</label><br />
-          <input type="text" id="searchbox" name="searchbox" />
-        </form> -->
+        <section class="faq__section faq__invitation">
+          <h3 class="faq__h3">Invitation</h3>
+          <details>
+            <summary class="faq__question">When is the RSVP deadline?</summary>
+            <p class="faq__answer">
+              As soon as possible, but no later than 10 October 2023 to ease
+              planning,
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
+                >RSVP</a
+              >.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              What should I do if I can't make it?
+            </summary>
+            <p class="faq__answer">
+              Please select 'not attending' in
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
+                >RSVP</a
+              >.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">Can I bring a date?</summary>
+            <p class="faq__answer">
+              We appologize, but the reception is by invitation ONLY.
+            </p>
+          </details>
+        </section>
 
-        <details>
-          <summary class="faq__question">Can I bring a date?</summary>
-          <p class="faq__answer">
-            We appologize, but the reception is by invitation ONLY.
-          </p>
-        </details>
+        <section class="faq__section faq__venue">
+          <h3 class="faq__h3">Venue</h3>
+          <details>
+            <summary class="faq__question">How do I get to the venue?</summary>
+            <p class="faq__answer">
+              There is a dropoff point at Sunway Resort Hotel & Spa. <br />
+              After the entrance, turn left and you can see a narrow pathway
+              leading to The Resort Caf&#xE9; @ Sunway Resort. <br />
+              Follow the path and you can see a lift and escalator, the ballroom
+              is two floors above you.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">Where should guests park?</summary>
+            <ol class="faq_parking_location faq__answer">
+              <li class="faq_parking_location_li">
+                Drop off at Sunway Resort Hotel & Spa, there is an indoor
+                parking sign following the driveway.
+              </li>
+              <li class="faq_parking_location_li">
+                Resort Hotel Outdoor Parking <br />
+                (You can drop guests off, then drive here).
+              </li>
+              <li class="faq_parking_location_li">
+                Sunway Pyramid Shopping Mall <br />
+                (Roughly 10 minutes walking through the mall.)
+              </li>
+            </ol>
+            <p class="faq__answer">
+              Note: All Sunway Hotels and Malls have the same parking rate.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              How to pay for parking after entering without a ticket?
+            </summary>
+            <ol class="faq_parking_method faq__answer">
+              <li class="faq_parking_method_li">Pals For Life App.</li>
+              <li class="faq_parking_method_li">
+                <a href="http://payment.sunwayparking.com">Mobile Payment</a>.
+              </li>
+              <li class="faq_parking_method_li">
+                Use Touch 'N Go Card at the exit.
+              </li>
+              <li class="faq_parking_method_li">
+                Cash / Card Payment at Auto Pay Stations located at :
+                <table class="faq__autopaystation_table">
+                  <!-- <caption class="offscreen">
+                  Auto Pay Station Location
+                </caption> -->
+                  <thead>
+                    <tr>
+                      <th class="faq__autopaystation_table__header" scope="col">
+                        Building Name
+                      </th>
+                      <th class="faq__autopaystation_table__header" scope="col">
+                        Location within Building
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="faq__autopaystation_table__item">
+                        Sunway Resort Hotel & Spa
+                      </td>
+                      <td class="faq__autopaystation_table__item">B3</td>
+                    </tr>
+                    <tr>
+                      <td class="faq__autopaystation_table__item">
+                        Sunway Pyramid Shopping Mall
+                      </td>
+                      <td class="faq__autopaystation_table__item" rowspan="4">
+                        B1 (Blue Zone) <br />
+                        G floor (Red Zone) <br />
+                        F floor (Red Zone) <br />
+                        CP2 (Orange Zone)
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="faq__autopaystation_table__item" colspan="2">
+                        Disclaimer: The locations listed above are from Sunway's
+                        <a href="http://payment.sunwayparking.com/">website</a>.
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </li>
+            </ol>
+          </details>
+          <details>
+            <summary class="faq__question">
+              Where do you recommend I stay?
+            </summary>
+            <table class="accomodation__table faq__answer">
+              <!-- <caption class="offscreen">
+              Accomodation
+            </caption> -->
+              <thead>
+                <tr>
+                  <th class="accomodation__table__header" scope="col">No</th>
+                  <th class="accomodation__table__header" scope="col">
+                    Hotel Name
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="accomodation__table__item">1</td>
+                  <td class="accomodation__table__item">Sunway Resort</td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">2</td>
+                  <td class="accomodation__table__item">Sunway Clio Hotel</td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">3</td>
+                  <td class="accomodation__table__item">
+                    Sunway Resort Hotel & Spa
+                  </td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">4</td>
+                  <td class="accomodation__table__item">
+                    Resort Suites Hotel at Bandar Sunway
+                  </td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">5</td>
+                  <td class="accomodation__table__item">
+                    W Studio Resort Suites, Bandar Sunway
+                  </td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">6</td>
+                  <td class="accomodation__table__item">
+                    Raintree Resort Suite At Sunway Pyramid Tower
+                  </td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">7</td>
+                  <td class="accomodation__table__item">Mixx Hotel Sunway</td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">8</td>
+                  <td class="accomodation__table__item">GM Sunway Metro</td>
+                </tr>
+                <tr>
+                  <td class="accomodation__table__item">9</td>
+                  <td class="accomodation__table__item">
+                    Sun Inns Hotel Sunway Lagoon
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="accomodation__table__item" colspan="2">
+                    Disclaimer: The accomodations listed above are close to
+                    reception venue and personal preferences of the couple.
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </details>
+        </section>
 
-        <details>
-          <summary class="faq__question">
-            Can I take centerpiece / candle / flowers home as a souvenir?
-          </summary>
-          <p class="faq__answer">Please do, but after the reception.</p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            Can I take and post pictures of the wedding on social media?
-          </summary>
-          <p class="faq__answer">
-            Yes, you can use the instagram tag <br />
-            #WeiToMrsCham and #MingFoundHisWei.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            Will alcoholic drinks be served?
-          </summary>
-          <p class="faq__answer">
-            No alcoholic drinks will be served, but there will be free flow
-            mocktail.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            Will there be diet options <br />
-            (vegan / vegetarian / special diet)?
-          </summary>
-          <p class="faq__answer">
-            Please let us know in the
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
-              >RSVP</a
-            >
-            before 1 October 2023.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            What is the dress code or theme?
-          </summary>
-          <p class="faq__answer">
-            Theme - Formal Attire. <br />
-            Gentlemen - Long sleeve button shirt with long pants and shoes.
-            <br />
-            Ladies - Formal dress.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">How do I get to the venue?</summary>
-          <p class="faq__answer">
-            There is a dropoff point at Sunway Resort Hotel & Spa. <br />
-            After the entrance, turn left and you can see a narrow pathway
-            leading to The Resort Caf&#xE9; @ Sunway Resort. <br />
-            Follow the path and you can see a lift and escalator, the ballroom
-            is two floors above you.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">Where should guests park?</summary>
-          <ol class="faq_parking_location faq__answer">
-            <li class="faq_parking_location_li">
-              Drop off at Sunway Resort Hotel & Spa, there is an indoor parking
-              sign following the driveway.
-            </li>
-            <li class="faq_parking_location_li">
-              Resort Hotel Outdoor Parking <br />
-              (You can drop guests off, then drive here).
-            </li>
-            <li class="faq_parking_location_li">
-              Sunway Pyramid Shopping Mall <br />
-              (Roughly 10 minutes walking through the mall.)
-            </li>
-          </ol>
-          <p class="faq__answer">
-            Note: All Sunway Hotels and Malls have the same parking rate.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            How to pay for parking after entering without a ticket?
-          </summary>
-          <ol class="faq_parking_method faq__answer">
-            <li class="faq_parking_method_li">Pals For Life App.</li>
-            <li class="faq_parking_method_li">
-              <a href="http://payment.sunwayparking.com">Mobile Payment</a>.
-            </li>
-            <li class="faq_parking_method_li">
-              Use Touch 'N Go Card at the exit.
-            </li>
-            <li class="faq_parking_method_li">
-              Cash / Card Payment at Auto Pay Stations located at :
-
-              <table class="faq__autopaystation_table">
-                <!-- <caption class="offscreen">
-                Auto Pay Station Location
-              </caption> -->
-                <thead>
-                  <tr>
-                    <th class="faq__autopaystation_table__header" scope="col">
-                      Building Name
-                    </th>
-                    <th class="faq__autopaystation_table__header" scope="col">
-                      Location within Building
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="faq__autopaystation_table__item">
-                      Sunway Resort Hotel & Spa
-                    </td>
-                    <td class="faq__autopaystation_table__item">B3</td>
-                  </tr>
-                  <tr>
-                    <td class="faq__autopaystation_table__item">
-                      Sunway Pyramid Shopping Mall
-                    </td>
-                    <td class="faq__autopaystation_table__item" rowspan="4">
-                      B1 (Blue Zone) <br />
-                      G floor (Red Zone) <br />
-                      F floor (Red Zone) <br />
-                      CP2 (Orange Zone)
-                    </td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td class="faq__autopaystation_table__item" colspan="2">
-                      Disclaimer: The locations listed above are from Sunway's
-                      <a href="http://payment.sunwayparking.com/">website</a>.
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-            </li>
-          </ol>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            Where do you recommend I stay?
-          </summary>
-          <table class="accomodation__table faq__answer">
-            <!-- <caption class="offscreen">
-            Accomodation
-          </caption> -->
-            <thead>
-              <tr>
-                <th class="accomodation__table__header" scope="col">No</th>
-                <th class="accomodation__table__header" scope="col">
-                  Hotel Name
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="accomodation__table__item">1</td>
-                <td class="accomodation__table__item">Sunway Resort</td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">2</td>
-                <td class="accomodation__table__item">Sunway Clio Hotel</td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">3</td>
-                <td class="accomodation__table__item">
-                  Sunway Resort Hotel & Spa
-                </td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">4</td>
-                <td class="accomodation__table__item">
-                  Resort Suites Hotel at Bandar Sunway
-                </td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">5</td>
-                <td class="accomodation__table__item">
-                  W Studio Resort Suites, Bandar Sunway
-                </td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">6</td>
-                <td class="accomodation__table__item">
-                  Raintree Resort Suite At Sunway Pyramid Tower
-                </td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">7</td>
-                <td class="accomodation__table__item">Mixx Hotel Sunway</td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">8</td>
-                <td class="accomodation__table__item">GM Sunway Metro</td>
-              </tr>
-              <tr>
-                <td class="accomodation__table__item">9</td>
-                <td class="accomodation__table__item">
-                  Sun Inns Hotel Sunway Lagoon
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td class="accomodation__table__item" colspan="2">
-                  Disclaimer: The accomodations listed above are close to
-                  reception venue and personal preferences of the couple.
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </details>
-
-        <details>
-          <summary class="faq__question">When is the RSVP deadline?</summary>
-          <p class="faq__answer">
-            As soon as possible, but no later than 1 October 2023 to ease
-            planning,
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
-              >RSVP</a
-            >.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            What should I do if I can't make it?
-          </summary>
-          <p class="faq__answer">
-            Please select 'not attending' in
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
-              >RSVP</a
-            >.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            What happens after wedding ceremony <br />(afternoon)?
-          </summary>
-          <p class="faq__answer">
-            Guests can make their way to Sunway Pyramid for shopping or rest at
-            the ceremony location.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            Where is the wedding reception (dinner)?
-          </summary>
-          <p class="faq__answer">
-            Grand Lagoon Ballroom, at Sunway Resort Hotel & Spa.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">What time should I arrive?</summary>
-          <p class="faq__answer">
-            6 PM - Cocktail. <br />
-            7 PM - Reception.
-          </p>
-        </details>
-
-        <details>
-          <summary class="faq__question">
-            If I still have questions, who do I contact?
-          </summary>
-          <p class="faq__answer">Please contact us.</p>
-        </details>
+        <section class="faq__section faq__banquet">
+          <h3 class="faq__h3">Banquet</h3>
+          <details>
+            <summary class="faq__question">
+              What is the dress code or theme?
+            </summary>
+            <p class="faq__answer">
+              Theme - Formal Attire. <br />
+              Gentlemen - Long sleeve button shirt with long pants and shoes.
+              <br />
+              Ladies - Formal dress.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              Will alcoholic drinks be served?
+            </summary>
+            <p class="faq__answer">
+              No alcoholic drinks will be served, but there will be free flow
+              mocktail.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              Will there be diet options <br />
+              (vegan / vegetarian / special diet)?
+            </summary>
+            <p class="faq__answer">
+              Please let us know in the
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScbKUZLCLat80ShOyGE8TrHu2tAIm6hRjBDzSbSFJ-BUU0PbQ/viewform?usp=pp_url&entry.529399852=1&entry.372832047=1+vegan,+1+vegetarian,+both+allergic+to+seafood"
+                >RSVP</a
+              >
+              before 10 October 2023.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              Can I take and post pictures of the wedding on social media?
+            </summary>
+            <p class="faq__answer">
+              Yes, you can use the instagram tag <br />
+              #WeiToMrsCham and #MingFoundHisWei.
+            </p>
+          </details>
+          <details>
+            <summary class="faq__question">
+              Can I take centerpiece / flowers home as a souvenir?
+            </summary>
+            <p class="faq__answer">Please do, but after the reception.</p>
+          </details>
+        </section>
       </article>
       <!-- FAQ ARTICLE END -->
     </main>

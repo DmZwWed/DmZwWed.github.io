@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Architects Daughter&display=swap");
 /* min-screen-width = 200px, max-screen-width = 1280px */
 
 /* || RESET */
@@ -60,7 +59,8 @@ address {
   --FS: clamp(8px, 4vw, 26px);
   --HERO-H1-FS: clamp(16px, 6vw, 52px);
   --MAIN-H2-FS: calc(var(--FS) * 1.5);
-  --MAIN-FAQQ-FS: calc(var(--FS) * 1.25);
+  --MAIN-H3-FS: calc(var(--FS) * 1.3);
+  --MAIN-FAQQ-FS: calc(var(--FS) * 1.15);
   --FONT-SHADOW-H1: -1px 3px 5px var(--SECONDARY-COLOR);
   --FONT-SHADOW: -0.1px 0.1px 1px var(--ACTION-COLOR);
 
@@ -76,7 +76,8 @@ address {
   /* MARGIN */
   --MARGIN-TB: 3vh;
   --MARGIN-FOOTER-TB: 5vh;
-  --MARGIN-QUESTION-TB: calc(var(--MARGIN-TB) * 1.5);
+  --MARGIN-FAQSECTION: calc(var(--MARGIN-TB) / 1.5);
+  --MARGIN-FAQQ-TB: calc(var(--MARGIN-TB) * 3);
   --MARGIN-ANSWER-TB: calc(var(--MARGIN-TB) / 2);
   --MARGIN-TABLE: var(--MARGIN-ANSWER-TB) auto var(--MARGIN-TB) auto;
 
@@ -140,7 +141,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   height: inherit;
-  padding: 3vh 0; /* center rsvp text */
+  padding: 4vh 0; /* center rsvp text */
   width: var(--HEADER-NAV-LR-WIDTH);
   color: var(--LINK-NAV-COLOR);
   text-shadow: var(--LINK-NAV-TEXT-SHADOW);
@@ -240,13 +241,41 @@ body {
   margin: var(--MARGIN-TB) 0;
 }
 
-input {
-  width: 100%;
-  margin: var(--MARGIN-ANSWER-TB) 0;
+.faq__section {
+  margin: var(--MARGIN-FAQSECTION);
+  border: 1px solid var(--FONT-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+}
+
+h3 {
+  font-size: var(--MAIN-H3-FS);
+}
+
+.faq__h3 {
+  margin-top: var(--MARGIN-FAQQ-TB);
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::before {
+  content: "+";
+  float: right;
+  transform: rotate(-720deg);
+  transition: transform ease 2s;
+}
+
+details[open] > summary:before {
+  content: "-";
+  float: right;
+  transform: rotate(720deg);
+  transition: transform ease 2s;
 }
 
 .faq__question {
-  margin: var(--MARGIN-QUESTION-TB) 0;
+  margin: var(--MARGIN-FAQQ-TB) calc(var(--MARGIN-FAQQ-TB) / 2);
   font-family: var(--FAQQ-FF);
   font-weight: bold;
   font-size: var(--MAIN-FAQQ-FS);
@@ -257,7 +286,7 @@ input {
 }
 
 .faq__answer {
-  margin-top: var(--MARGIN-ANSWER-TB);
+  margin: var(--MARGIN-ANSWER-TB) 0;
   font-family: var(--FAQA-FF);
 }
 
@@ -285,4 +314,11 @@ input {
   font-size: var(--FS);
   color: var(--FOOTER-FONT-COLOR);
   margin: var(--MARGIN-FOOTER-TB) 0;
+}
+
+.footer__back2top {
+  background-color: var(--ACTION-COLOR);
+  color: var(--SECONDARY-COLOR);
+  border-radius: var(--BORDER-RADIUS) 0;
+  padding: 0 2vw;
 }
