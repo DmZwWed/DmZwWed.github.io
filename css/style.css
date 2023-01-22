@@ -266,6 +266,7 @@ summary {
 details summary::before {
   content: "+";
   float: right;
+  font-size: var(--MAIN-H2-FS);
   transform: rotate(-720deg);
   transition: transform ease 2s;
 }
@@ -273,6 +274,7 @@ details summary::before {
 details[open] > summary:before {
   content: "-";
   float: right;
+  font-size: var(--MAIN-H2-FS);
   transform: rotate(720deg);
   transition: transform ease 2s;
 }
