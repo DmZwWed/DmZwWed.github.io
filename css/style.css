@@ -305,7 +305,8 @@ details[open] > summary:before {
 
 .faq_parking_method_li,
 .faq_parking_location_li,
-.faq_get2venue_li {
+.faq_get2venue_li,
+.faq_discounts_li {
   margin: 0 var(--FAQA-MARGIN-SIDE) var(--FAQA-BOTTOM-MARGIN)
     var(--FAQA-MARGIN-SIDE);
 }
